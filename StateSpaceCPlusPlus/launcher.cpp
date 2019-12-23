@@ -32,6 +32,7 @@ int main()
 	double simulationTimeS = 160.0; //Simulation time in seconds
 	int n = round((simulationTimeS - initialTime) / dt); //Number of iterations
 
+	//Allocate array
 	ColumnVec2* X = new ColumnVec2[n];
 
 	//Set initial value
