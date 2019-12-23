@@ -33,7 +33,6 @@ int main()
 	int n = round((simulationTimeS - initialTime) / dt); //Number of iterations
 
 	ColumnVec2* X = new ColumnVec2[n];
-	memset(X, 0, sizeof(ColumnVec2));
 
 	//Set initial value
 	X[0] = X0;
