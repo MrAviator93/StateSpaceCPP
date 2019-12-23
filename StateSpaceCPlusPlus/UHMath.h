@@ -65,6 +65,8 @@ namespace UH
 			{
 				return values[index];
 			}
+			//if index out of range return the 0 element
+			return values[0];
 		}
 
 		//Access by reference.
@@ -74,6 +76,8 @@ namespace UH
 			{
 				return values[index];
 			}
+			//if index out of range return the 0 element
+			return values[0];
 		}
 
 	private:
