@@ -1,0 +1,8 @@
+Build
+Debug
+Release
+.vs
+*.sdf
+*.user
+*.opendb
+*.html
