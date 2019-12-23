@@ -21,40 +21,40 @@ namespace UH
 	public:
 		TColumnVec2()
 		{
-			memset(&values, 0, sizeof(T) * 2);
+			memset(&m_values, 0, sizeof(T) * 2);
 		}
 
 		TColumnVec2(T value)
 		{
-			values[0] = values[1] = value;
+			m_values[0] = m_values[1] = value;
 		}
 
 		TColumnVec2(T a1, T a2)
 		{
-			values[0] = a1;
-			values[1] = a2;
+			m_values[0] = a1;
+			m_values[1] = a2;
 		}
 
 		~TColumnVec2() = default;
 
 		TColumnVec2 operator= (TColumnVec2 const& vec2) 
 		{
-			values[0] = vec2.values[0];
-			values[1] = vec2.values[1];
+			m_values[0] = vec2.m_values[0];
+			m_values[1] = vec2.m_values[1];
 			return *this;
 		}
 
 		TColumnVec2 operator+ (TColumnVec2 const& vec2)
 		{
-			values[0] += vec2.values[0];
-			values[1] += vec2.values[1];
+			m_values[0] += vec2.m_values[0];
+			m_values[1] += vec2.m_values[1];
 			return *this;
 		}
 
 		TColumnVec2 operator* (T const& scalar)
 		{
-			values[0] *= scalar;
-			values[1] *= scalar;
+			m_values[0] *= scalar;
+			m_values[1] *= scalar;
 			return *this;
 		}
 
@@ -63,10 +63,10 @@ namespace UH
 		{
 			if (index >= 0 && index <= 1)
 			{
-				return values[index];
+				return m_values[index];
 			}
 			//if index out of range return the 0 element
-			return values[0];
+			return m_values[0];
 		}
 
 		//Access by reference.
@@ -74,14 +74,14 @@ namespace UH
 		{
 			if (index >= 0 && index <= 1)
 			{
-				return values[index];
+				return m_values[index];
 			}
 			//if index out of range return the 0 element
-			return values[0];
+			return m_values[0];
 		}
 
 	private:
-		T values[2];
+		T m_values[2];
 	};
 
 	//-----------------------------------------------------------------------
@@ -96,20 +96,20 @@ namespace UH
 	public:
 		TMatrix2x2()
 		{
-			memset(&values, 0, sizeof(T) * 4);
+			memset(&m_values, 0, sizeof(T) * 4);
 		}
 
 		TMatrix2x2(T value)
 		{
-			values[0] = values[1] = values[2] = values[3] = value;
+			m_values[0] = m_values[1] = m_values[2] = m_values[3] = value;
 		}
 
 		TMatrix2x2(T a11, T a12, T a21, T a22)
 		{
-			values[0] = a11;
-			values[1] = a12;
-			values[2] = a21;
-			values[3] = a22;
+			m_values[0] = a11;
+			m_values[1] = a12;
+			m_values[2] = a21;
+			m_values[3] = a22;
 		}
 
 		~TMatrix2x2() = default;
@@ -117,13 +117,13 @@ namespace UH
 		TColumnVec2<T> operator* (TColumnVec2<T> const& columnVec2)
 		{
 			TColumnVec2<T> newColumnVec2;
-			newColumnVec2[0] = values[0] * columnVec2[0] + values[1] * columnVec2[1];
-			newColumnVec2[1] = values[2] * columnVec2[0] + values[3] * columnVec2[1];
+			newColumnVec2[0] = m_values[0] * columnVec2[0] + m_values[1] * columnVec2[1];
+			newColumnVec2[1] = m_values[2] * columnVec2[0] + m_values[3] * columnVec2[1];
 			return newColumnVec2;
 		}
 
 	private:
-		T values[4];
+		T m_values[4];
 	};
 
 	using ColumnVec2 = TColumnVec2<double>;
