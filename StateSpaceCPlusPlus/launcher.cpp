@@ -24,7 +24,7 @@ int main()
 	double initialTime = 0.0;                       
 	double dt = 0.01; //Step size
 	double simulationTimeS = 160.0; //Simulation time in seconds
-	int n = round((simulationTimeS - initialTime) / dt); //Number of Iterations
+	int n = round((simulationTimeS - initialTime) / dt); //Number of iterations
 
 	ColumnVec2* X = new ColumnVec2[n];
 	memset(X, 0, sizeof(ColumnVec2));
