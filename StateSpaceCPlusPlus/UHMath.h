@@ -130,5 +130,4 @@ namespace UH
 	using Matrix2x2 = TMatrix2x2<double>;
 
 } //namespace UH
-
 #endif //!UH_MATH_H
