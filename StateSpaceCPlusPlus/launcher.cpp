@@ -13,6 +13,9 @@ FILE UTMOST REVIEW DONE ON (25.12.2019) BY ARTUR K.
 
 using namespace UH;
 
+// ****** TODO: Consider implementing ss(...) method.
+//double ss(const Matrix2x2& A, const ColumnVec2& B, const RowVec2& C, const double simulationTimeS, const double dt = 0.01);
+
 int main()
 {
     std::cout << "Welcome!\n"; 
