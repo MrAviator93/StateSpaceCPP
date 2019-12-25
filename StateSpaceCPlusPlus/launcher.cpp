@@ -83,6 +83,6 @@ int main()
 	delete[] Y;
 
 	std::cout << "Done, see output.txt file.\n";
-	std::cout << "Time elapsed: " << timeElapsed << "ms\n";
+	std::cout << "Time elapsed: " << timeElapsed << "us\n";
 	std::cin.get();
 }
