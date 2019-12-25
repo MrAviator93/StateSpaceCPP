@@ -43,6 +43,7 @@ int main()
 	//Allocate arrays
 	ColumnVec2* X = new ColumnVec2[n];
 	double* Y = new double[n];
+	memset(Y, 0, sizeof(double) * n);
 
 	//Set initial value
 	X[0] = X0;
