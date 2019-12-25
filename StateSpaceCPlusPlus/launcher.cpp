@@ -43,6 +43,14 @@ int main()
 		X[i] = X[i - 1] + (A * X[i - 1] + B * u) * dt;
 	}
 
+	//Control law
+	//Matrix2x2 Q(1,0,0,2);
+	//double R = 1;
+	//auto K = lqr(A,B,Q,R);
+
+	//Closed loop system then look like this
+	//ss((A-B*K),B,C,D);
+
 	std::ofstream outFile;
 	outFile.open("outputs.txt");
 	outFile << "Time(s) Column1 Column2";
