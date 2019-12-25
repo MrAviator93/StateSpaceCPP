@@ -38,6 +38,7 @@ int main()
 	//Set initial value
 	X[0] = X0;
 
+	//Simulation of the response of the system for the period of simulationTimeS.
 	for (auto i = 1; i < n; i++)
 	{
 		X[i] = X[i - 1] + (A * X[i - 1] + B * u) * dt;
