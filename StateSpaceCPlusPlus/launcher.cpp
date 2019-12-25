@@ -67,5 +67,3 @@ int main()
 	std::cout << "Done, see output.txt file.\n";
 	std::cin.get();
 }
-
-
