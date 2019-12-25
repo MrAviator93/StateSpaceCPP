@@ -11,7 +11,7 @@ FILE UTMOST REVIEW DONE ON (25.12.2019) BY ARTUR K.
 
 namespace UH
 {
-	typedef long long											int64;
+	typedef long long int										int64;
 	typedef std::chrono::high_resolution_clock					Clock;
 	typedef std::chrono::time_point<std::chrono::steady_clock>	TimePoint;
 
