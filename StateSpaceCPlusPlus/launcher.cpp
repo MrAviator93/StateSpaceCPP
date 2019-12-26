@@ -22,7 +22,7 @@ struct SysCharacteristics
 	double			overshoot;
 	double			yss;
 	double			ess;
-	double*			pYValueArr;
+	double*			pYArr;
 	uint32			arrSize;
 };
 
