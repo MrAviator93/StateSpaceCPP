@@ -1,7 +1,7 @@
 /***********************************************************************
 FILE LAUNCHER.CPP CONTAINS SIMPLE MODEL OF STATE SPACE
 
-FILE UTMOST REVIEW DONE ON (25.12.2019) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (26.12.2019) BY ARTUR K. 
 ***********************************************************************/
 
 #include "pch.h"
@@ -54,25 +54,25 @@ int main()
 	int n = round((simulationTimeS - initialTime) / dt); //Number of iterations
 
 	//Allocate arrays
-	ColumnVec2* X = new ColumnVec2[n];
-	double* Y = new double[n];
-	memset(Y, 0, sizeof(double) * n);
+	ColumnVec2* pXArr = new ColumnVec2[n];	//X
+	double* pYArr = new double[n];			//Y
+	memset(pYArr, 0, sizeof(double) * n);
 
 	//Set initial value
-	X[0] = X0;
+	pXArr[0] = X0;
 
 	timer1.start();
 
 	//Simulation of the response of the system for the period of simulationTimeS.
 	for (auto i = 1; i < n; i++)
 	{
-		X[i] = X[i - 1] + (A * X[i - 1] + B * u) * dt;
+		pXArr[i] = pXArr[i - 1] + (A * pXArr[i - 1] + B * u) * dt;
 	}
 
 	for (auto j = 0; j < n; j++)
 	{
 		//Y is the output
-		Y[j] = C * X[j];
+		pYArr[j] = C * pXArr[j];
 	}
 
 	auto timeElapsed = timer1.getElapsedTimeUs();
@@ -91,13 +91,13 @@ int main()
 	outFile << "Time(s) Column1 Column2 Y";
 	for (auto i = 0; i < n; i++)
 	{
-		outFile << "\n" << i * dt << " " << X[i][0] << " " << X[i][1] << " " << Y[i];
+		outFile << "\n" << i * dt << " " << pXArr[i][0] << " " << pXArr[i][1] << " " << pYArr[i];
 	}
 	outFile.close();
 
 	//Clean-up after ourselves
-	delete[] X;
-	delete[] Y;
+	delete[] pXArr;
+	delete[] pYArr;
 
 	std::cout << "Done, see output.txt file.\n";
 	std::cout << "Time elapsed: " << timeElapsed << "us\n";

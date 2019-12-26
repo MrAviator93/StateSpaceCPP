@@ -1,7 +1,7 @@
 ﻿/***********************************************************************
 FILE UHMATH.H CONTAINS BASIC MATRIX CLASS IMPLEMENTATIONS
 
-FILE UTMOST REVIEW DONE ON (25.12.2019) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (26.12.2019) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef UH_MATH_H
