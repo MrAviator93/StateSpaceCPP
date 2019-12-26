@@ -225,6 +225,14 @@ namespace UH
 
 		~TMatrix2x2() = default;
 
+		void makeIdentity()
+		{
+			m_values[0] = 1.0;
+			m_values[1] = 0.0;
+			m_values[2] = 0.0;
+			m_values[3] = 1.0;
+		}
+
 		TColumnVec2<T> operator* (TColumnVec2<T> const& columnVec2)
 		{
 			TColumnVec2<T> newColumnVec2;
