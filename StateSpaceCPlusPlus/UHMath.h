@@ -103,11 +103,11 @@ namespace UH
 	//
 	//Basic Implementation of column vector 2 class.
 	//
-	// _ _
-	//|	x |
-	//|	  |
-	//|	y |
-	// ͞  ͞
+	//     _ _
+	//    |	x |
+	//    |	  |
+	//    |	y |
+	//     ͞  ͞
 	//-----------------------------------------------------------------------
 
 	template<class T>
@@ -193,6 +193,12 @@ namespace UH
 	//TEMPLATE MATRIX 2 BY 2
 	//
 	//Basic Implementation of 2 by 2 matrix class.
+	//
+	//     _       _
+	//    |a11	 a12|
+	//    |			|
+	//    |a21	 a22|
+	//     ͞        ͞   
 	//-----------------------------------------------------------------------
 
 	template<class T>
