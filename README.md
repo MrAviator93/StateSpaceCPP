@@ -1,4 +1,4 @@
-# statespacecplusplus
+# State Space C++
 Example Implementation of 2D State Space Model in C++
 
 # License
